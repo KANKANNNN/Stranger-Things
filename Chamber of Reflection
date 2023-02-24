@@ -1,0 +1,239 @@
+use_bpm 65
+with_fx :reverb do
+  with_fx :echo, mix: 0.1, phase: 0.55 do
+    sample :bd_mehackit, cutoff: 110
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sample :drum_snare_hard
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.25
+    sample :bd_mehackit, cutoff: 110
+    sleep 0.25
+    sample :drum_cymbal_closed
+    sample :bd_mehackit, cutoff: 110
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :drum_snare_hard
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :bd_mehackit, cutoff: 110
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sample :drum_snare_hard
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.25
+    sample :bd_mehackit, cutoff: 110
+    sleep 0.25
+    sample :drum_cymbal_closed
+    sample :bd_mehackit, cutoff: 110
+    sleep 0.5
+    sample :drum_cymbal_closed
+    sleep 0.25
+    sample :drum_snare_hard
+    sleep 0.25
+    sample :drum_cymbal_closed
+    sample :drum_snare_hard
+    sleep 0.25
+    sample :bd_mehackit, cutoff: 110
+    sample :drum_cymbal_open, sustain: 1.5
+    sleep 0.75
+  end
+  live_loop :heart do
+    with_fx :reverb do
+      with_fx :echo, mix: 0.1, phase: 0.55 do
+        sample :bd_mehackit, cutoff: 110
+        sleep 1.75
+        sample :bd_mehackit, cutoff: 110
+        sleep 0.25
+        sample :bd_mehackit, cutoff: 110
+        sleep 2
+      end
+    end
+  end
+  live_loop :hi do
+    with_fx :reverb do
+      with_fx :echo, mix: 0.1, phase: 0.55 do
+        sample :drum_cymbal_closed
+        sleep 0.5
+      end
+    end
+  end
+  live_loop :sn do
+    with_fx :reverb do
+      with_fx :echo, mix: 0.1, phase: 0.55 do
+        sleep 1
+        sample :drum_snare_hard
+        sleep 1
+      end
+    end
+  end
+  live_loop :bass do
+    with_fx :reverb do
+      use_synth :fm
+      play:ab2, amp: 0.4
+      sleep 0.25
+      play:ab2, amp: 0.4
+      sleep 1.5
+      play:ab2, amp: 0.4
+      sleep 0.25
+      play:bb2, amp: 0.4
+      sleep 0.25
+      play:bb2, amp: 0.4
+      sleep 1.5
+      play:bb2, amp: 0.4
+      sleep 0.25
+      play:cb3, amp: 0.4
+      sleep 0.25
+      play:cb3, amp: 0.4
+      sleep 1.5
+      play:cb3, amp: 0.4
+      sleep 0.25
+      play:cb3, amp: 0.4
+      sleep 0.25
+      play:cb4, amp: 0.4
+      sleep 0.5
+      play:cb3, amp: 0.4
+      sleep 0.25
+      play:cb4, amp: 0.4
+      sleep 0.25
+      play:gb2, amp: 0.4
+      sleep 0.75
+      play:ab2, amp: 0.4
+      sleep 0.25
+      play:ab2, amp: 0.4
+      sleep 1.5
+      play:ab2, amp: 0.4
+      sleep 0.25
+      play:bb2, amp: 0.4
+      sleep 0.25
+      play:bb2, amp: 0.4
+      sleep 1.5
+      play:bb2, amp: 0.4
+      sleep 0.25
+      play:eb3, amp: 0.4
+      sleep 0.25
+      play:eb3, amp: 0.4
+      sleep 1.5
+      play:eb3, amp: 0.4
+      sleep 0.25
+      play:eb3, amp: 0.4
+      sleep 0.25
+      play:eb4, amp: 0.4
+      sleep 0.5
+      play:eb3, amp: 0.4
+      sleep 0.25
+      play:eb4, amp: 0.4
+      sleep 0.25
+      play:db3, amp: 0.4
+      sleep 0.75
+    end
+  end
+  live_loop :high do
+    with_fx :eq do
+      with_fx :reverb do
+        use_synth :blade
+        sleep 1
+        play:g5, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:e5, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.75
+        play:c5, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:a4, amp: 1, sustain: 0.4
+        sleep 2
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:c5, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:d5, amp: 1, sustain: 0.4
+        sleep 0.75
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.25
+        play:fs4, amp: 1, sustain: 0.4
+        sleep 1
+        play:fs4, amp: 1, sustain: 0.4
+        sleep 0.75
+        play:g4, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:fs4, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:e4, amp: 1, sustain: 0.4
+        sleep 2.65
+        play:d4, amp: 1, sustain: 0.4
+        sleep 0.25
+        play:e4, amp: 1, sustain: 0.4
+        sleep 0.25
+        play:b3, amp: 1, sustain: 0.75
+        sleep 4.75
+        play:g5, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:e5, amp: 1, sustain: 0.22
+        sleep 0.5
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.75
+        play:c5, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:a4, amp: 1, sustain: 0.4
+        sleep 2
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:c5, amp: 1, sustain: 0.4
+        sleep 0.5
+        play:d5, amp: 1, sustain: 0.4
+        sleep 0.75
+        play:b4, amp: 1, sustain: 0.4
+        sleep 0.25
+        play:fs4, amp: 1, sustain: 0.4
+        sleep 1
+        play:fs4, amp: 1, sustain: 0.4
+        sleep 0.75
+        play:g4, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:fs4, amp: 1, sustain: 0.4
+        sleep 0.15
+        play:e4, amp: 1, sustain: 0.4
+        sleep 2.65
+        play:d4, amp: 1, sustain: 0.4
+        sleep 0.25
+        play:e4, amp: 1, sustain: 1
+        sleep 4
+      end
+    end
+  end
+  live_loop :back do
+    with_fx :bitcrusher do
+      with_fx :compressor do
+        use_synth :dark_ambience
+        play:a4, sustain: 1.55, amp: 5
+        sleep 2
+        play:b4, sustain: 1.55, amp: 5
+        sleep 2
+        play:c5, sustain: 3.55, amp: 5
+        sleep 4
+        play:a4, sustain: 1.55, amp: 5
+        sleep 2
+        play:b4, sustain: 1.55, amp: 5
+        sleep 2
+        play:e5, sustain: 3.55, amp: 5
+        sleep 4
+      end
+    end
+  end
+end
