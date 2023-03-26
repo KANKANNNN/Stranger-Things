@@ -1,0 +1,50 @@
+use_bpm 75
+live_loop :hi do
+  sample :drum_cymbal_closed, cutoff: 110
+  sleep 0.125
+  sample :drum_cymbal_closed, cutoff: 110
+  sleep 0.125
+  sample :drum_cymbal_closed, cutoff: 110
+  sleep 0.25
+  14.times do
+    sample :drum_cymbal_closed, cutoff: 110
+    sleep 0.25
+  end
+end
+live_loop :b do
+  sample :bd_ada
+  play:cb1, amp: 5
+  sleep 0.5
+  sample :bd_ada
+  play:cb1, amp: 5
+  sleep 1
+  sample :bd_ada
+  play:db1, amp: 5
+  sleep 1
+  sample :bd_ada
+  play:cb1, amp: 5
+  sleep 1.5
+end
+live_loop :c do
+  sleep 1
+  c = "C:/Users/nicol/Downloads/03301030-cba4-11ed-ac72-b1f85d917baf.wav"
+  sample c
+  sleep 1.25
+  s = "C:/Users/nicol/Downloads/sn.wav"
+  sample s
+  sleep 0.75
+  c = "C:/Users/nicol/Downloads/03301030-cba4-11ed-ac72-b1f85d917baf.wav"
+  sample c
+  sleep 0.25
+  s = "C:/Users/nicol/Downloads/sn.wav"
+  sample s
+  sleep 0.75
+end
+use_bpm 70
+live_loop :l do
+  l = "C:/Users/nicol/Downloads/leead.wav"
+  sample l
+  sleep 0.943
+end
+j = "C:/Users/nicol/Downloads/ikk.wav"
+sample j, amp: 0.7
