@@ -1,13 +1,13 @@
 use_bpm 75
 live_loop :hi do
-  sample :drum_cymbal_closed, cutoff: 110
+  sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
   sleep 0.125
-  sample :drum_cymbal_closed, cutoff: 110
+  sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
   sleep 0.125
-  sample :drum_cymbal_closed, cutoff: 110
+  sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
   sleep 0.25
   14.times do
-    sample :drum_cymbal_closed, cutoff: 110
+    sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
     sleep 0.25
   end
 end
@@ -27,13 +27,13 @@ live_loop :b do
 end
 live_loop :c do
   sleep 1
-  c = "C:/Users/nicol/Downloads/03301030-cba4-11ed-ac72-b1f85d917baf.wav"
+  c = "C:/Users/nicol/Downloads/clap.wav"
   sample c
   sleep 1.25
   s = "C:/Users/nicol/Downloads/sn.wav"
   sample s
   sleep 0.75
-  c = "C:/Users/nicol/Downloads/03301030-cba4-11ed-ac72-b1f85d917baf.wav"
+  c = "C:/Users/nicol/Downloads/clap.wav"
   sample c
   sleep 0.25
   s = "C:/Users/nicol/Downloads/sn.wav"
@@ -44,7 +44,12 @@ use_bpm 70
 live_loop :l do
   l = "C:/Users/nicol/Downloads/leead.wav"
   sample l
-  sleep 0.943
+  sleep 0.9329
 end
-j = "C:/Users/nicol/Downloads/ikk.wav"
-sample j, amp: 0.7
+live_loop :carti do
+  1.times do
+    j = "C:/Users/nicol/Downloads/ikkk.wav"
+    sample j, amp: 0.7
+    sleep 100
+  end
+end
