@@ -1,55 +1,68 @@
 use_bpm 75
 live_loop :hi do
-  sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
-  sleep 0.125
-  sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
-  sleep 0.125
-  sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
-  sleep 0.25
-  14.times do
-    sample :drum_cymbal_closed, cutoff: 110,amp: 1.5
+  20.times do
+    sample :drum_cymbal_closed, cutoff: 110,amp: 2
+    sleep 0.125
+    sample :drum_cymbal_closed, cutoff: 110,amp: 2
+    sleep 0.125
+    sample :drum_cymbal_closed, cutoff: 110,amp: 2
     sleep 0.25
+    14.times do
+      sample :drum_cymbal_closed, cutoff: 110,amp: 2
+      sleep 0.25
+    end
   end
+  stop
 end
 live_loop :b do
-  sample :bd_ada
-  play:cb1, amp: 5
-  sleep 0.5
-  sample :bd_ada
-  play:cb1, amp: 5
-  sleep 1
-  sample :bd_ada
-  play:db1, amp: 5
-  sleep 1
-  sample :bd_ada
-  play:cb1, amp: 5
-  sleep 1.5
+  20.times do
+    sample :bd_ada
+    play:cb1, amp: 5.5
+    sleep 0.5
+    sample :bd_ada
+    play:cb1, amp: 5.5
+    sleep 1
+    sample :bd_ada
+    play:db1, amp: 5.5
+    sleep 1
+    sample :bd_ada
+    play:cb1, amp: 5.5
+    sleep 1.5
+  end
+  stop
 end
 live_loop :c do
-  sleep 1
-  c = "C:/Users/nicol/Downloads/clap.wav"
-  sample c
-  sleep 1.25
-  s = "C:/Users/nicol/Downloads/sn.wav"
-  sample s
-  sleep 0.75
-  c = "C:/Users/nicol/Downloads/clap.wav"
-  sample c
-  sleep 0.25
-  s = "C:/Users/nicol/Downloads/sn.wav"
-  sample s
-  sleep 0.75
+  22.times do
+    sleep 1
+    c = "C:/Users/nicol/Downloads/clap.wav"
+    sample c, amp: 1.5
+    sleep 1.25
+    s = "C:/Users/nicol/Downloads/sn.wav"
+    sample s, amp: 1.5
+    sleep 0.75
+    c = "C:/Users/nicol/Downloads/clap.wav"
+    sample c, amp: 1.5
+    sleep 0.25
+    s = "C:/Users/nicol/Downloads/sn.wav"
+    sample s, amp: 1.5
+    sleep 0.75
+  end
+  stop
 end
 use_bpm 70
 live_loop :l do
-  l = "C:/Users/nicol/Downloads/leead.wav"
-  sample l
-  sleep 0.9329
+  80.times do
+    l = "C:/Users/nicol/Downloads/leead.wav"
+    sample l
+    sleep 0.9329
+  end
+  stop
 end
 live_loop :carti do
   1.times do
-    j = "C:/Users/nicol/Downloads/ikkk.wav"
-    sample j, amp: 0.7
-    sleep 100
+    j = "C:/Users/nicol/Downloads/bestone.wav"
+    sample j
+    sleep 300
   end
+  stop
 end
