@@ -1,0 +1,491 @@
+use_bpm 65
+# ss = "C:/Users/Nicolas Higareda/Downloads/35c58dc0-c1c9-11ed-a77d-b5b3699f5df9.wav"
+# sample ss,amp: 0.5
+with_fx :echo, mix: 0.1, phase: 0.55 do
+  sample :bd_mehackit, cutoff: 110, amp: 0.15
+  sample :drum_cymbal_closed, amp: 0.15
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.18
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.20
+  sample :drum_snare_hard, amp: 0.20
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.25
+  sleep 0.25
+  sample :bd_mehackit, cutoff: 110, amp: 0.25
+  sleep 0.25
+  sample :drum_cymbal_closed, amp: 0.30
+  sample :bd_mehackit, cutoff: 110, amp: 0.30
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.35
+  sleep 0.5
+  sample :drum_snare_hard, amp: 0.40
+  sample :drum_cymbal_closed, amp: 0.40
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.45
+  sleep 0.5
+  sample :bd_mehackit, cutoff: 110, amp: 0.45
+  sample :drum_cymbal_closed, amp: 0.45
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.50
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.50
+  sample :drum_snare_hard, amp: 0.55
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.60
+  sleep 0.25
+  sample :bd_mehackit, cutoff: 110, amp: 0.65
+  sleep 0.25
+  sample :drum_cymbal_closed, amp: 0.70
+  sample :bd_mehackit, cutoff: 110, amp: 0.70
+  sleep 0.5
+  sample :drum_cymbal_closed, amp: 0.75
+  # f = "C:/Users/Nicolas Higareda/Downloads/043dd790-c35d-11ed-aa2d-f3676d637779.wav"
+  # sample f, amp: 1
+  sleep 0.25
+  sample :drum_snare_hard, amp: 0.80
+  sleep 0.25
+  sample :drum_cymbal_closed, amp: 0.90
+  sample :drum_snare_hard, amp: 0.90
+  sleep 0.25
+  sample :bd_mehackit, cutoff: 110, amp: 1
+  sample :drum_cymbal_open, sustain: 1.5, amp: 1
+  sleep 0.75
+end
+live_loop :heart do
+  8.times do
+    with_fx :reverb do
+      with_fx :echo, mix: 0.1, phase: 0.55 do
+        sample :bd_mehackit, cutoff: 110
+        sleep 1.75
+        sample :bd_mehackit, cutoff: 110
+        sleep 0.25
+        sample :bd_mehackit, cutoff: 110
+        sleep 2
+      end
+    end
+  end
+  stop
+end
+live_loop :hi do
+  64.times do
+    with_fx :reverb do
+      with_fx :echo, mix: 0.1, phase: 0.55 do
+        sample :drum_cymbal_closed
+        sleep 0.5
+      end
+    end
+  end
+  stop
+end
+live_loop :sn do
+  16.times do
+    with_fx :reverb do
+      with_fx :echo, mix: 0.1, phase: 0.55 do
+        sleep 1
+        sample :drum_snare_hard
+        sleep 1
+      end
+    end
+  end
+  stop
+end
+live_loop :bass do
+  2.times do
+    with_fx :compressor do
+      with_fx :reverb do
+        use_synth :fm
+        play:ab1, amp: 1
+        play:ab2, amp: 2
+        sleep 0.25
+        play:ab1, amp: 1
+        play:ab2, amp: 2
+        sleep 1.5
+        play:ab1, amp: 1
+        play:ab2, amp: 2
+        sleep 0.25
+        play:bb1, amp: 1
+        play:bb2, amp: 2
+        sleep 0.25
+        play:bb1, amp: 1
+        play:bb2, amp: 2
+        sleep 1.5
+        play:bb1, amp: 1
+        play:bb2, amp: 2
+        sleep 0.25
+        play:cb2, amp: 1
+        play:cb3, amp: 2
+        sleep 0.25
+        play:cb2, amp: 1
+        play:cb3, amp: 2
+        sleep 1.5
+        play:cb2, amp: 1
+        play:cb3, amp: 2
+        sleep 0.25
+        play:cb2, amp: 1
+        play:cb3, amp: 2
+        sleep 0.25
+        play:cb3, amp: 1
+        play:cb4, amp: 2
+        sleep 0.5
+        play:cb2, amp: 1
+        play:cb3, amp: 2
+        sleep 0.25
+        play:cb3, amp: 1
+        play:cb4, amp: 2
+        sleep 0.25
+        play:gb1, amp: 1
+        play:gb2, amp: 2
+        sleep 0.75
+        play:ab1, amp: 1
+        play:ab2, amp: 2
+        sleep 0.25
+        play:ab1, amp: 1
+        play:ab2, amp: 2
+        sleep 1.5
+        play:ab1, amp: 1
+        play:ab2, amp: 2
+        sleep 0.25
+        play:bb1, amp: 1
+        play:bb2, amp: 2
+        sleep 0.25
+        play:bb1, amp: 1
+        play:bb2, amp: 2
+        sleep 1.5
+        play:bb1, amp: 1
+        play:bb2, amp: 2
+        sleep 0.25
+        play:eb2, amp: 1
+        play:eb3, amp: 2
+        sleep 0.25
+        play:eb2, amp: 1
+        play:eb3, amp: 2
+        sleep 1.5
+        play:eb2, amp: 1
+        play:eb3, amp: 2
+        sleep 0.25
+        play:eb2, amp: 1
+        play:eb3, amp: 2
+        sleep 0.25
+        play:eb3, amp: 1
+        play:eb4, amp: 2
+        sleep 0.5
+        play:eb2, amp: 1
+        play:eb3, amp: 2
+        sleep 0.25
+        play:eb3, amp: 1
+        play:eb4, amp: 2
+        sleep 0.25
+        play:db2, amp: 1
+        play:db3, amp: 2
+        sleep 0.75
+      end
+    end
+  end
+  stop
+end
+live_loop :high do
+  1.times do
+    with_fx :flanger do
+      with_fx :compressor do
+        with_fx :bitcrusher do
+          with_fx :reverb,mix: 0.7 do
+            use_synth :blade
+            sleep 1
+            play:g6, amp: 0.75, sustain: 0.6
+            play:g8, amp: 0.75, sustain: 0.6
+            play:g9, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:e6, amp: 0.75, sustain: 0.6
+            play:e8, amp: 0.75, sustain: 0.6
+            play:e9, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.75
+            play:c6, amp: 0.75, sustain: 0.6
+            play:c8, amp: 0.75, sustain: 0.6
+            play:c9, amp: 0.75, sustain: 0.6
+            sleep 0.15
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.15
+            play:a5, amp: 0.75, sustain: 0.6
+            play:a7, amp: 0.75, sustain: 0.6
+            play:a8, amp: 0.75, sustain: 0.6
+            sleep 2
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:c6, amp: 0.75, sustain: 0.6
+            play:c8, amp: 0.75, sustain: 0.6
+            play:c9, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:d6, amp: 0.75, sustain: 0.6
+            play:d8, amp: 0.75, sustain: 0.6
+            play:d9, amp: 0.75, sustain: 0.6
+            sleep 0.75
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.25
+            play:fs5, amp: 0.5, sustain: 0.6
+            play:fs7, amp: 0.5, sustain: 0.6
+            play:fs8, amp: 0.5, sustain: 0.6
+            sleep 1
+            play:fs5, amp: 0.5, sustain: 0.6
+            play:fs7, amp: 0.5, sustain: 0.6
+            play:fs8, amp: 0.5, sustain: 0.6
+            sleep 0.75
+            play:g5, amp: 0.5, sustain: 0.6
+            play:g7, amp: 0.5, sustain: 0.6
+            play:g8, amp: 0.5, sustain: 0.6
+            sleep 0.15
+            play:fs5, amp: 0.5, sustain: 0.6
+            play:fs7, amp: 0.5, sustain: 0.6
+            play:fs8, amp: 0.5, sustain: 0.6
+            sleep 0.15
+            play:e5, amp: 0.5, sustain: 0.6
+            play:e7, amp: 0.5, sustain: 0.6
+            play:e8, amp: 0.5, sustain: 0.6
+            sleep 2.65
+            play:d5, amp: 0.5, sustain: 0.6
+            play:d7, amp: 0.5, sustain: 0.6
+            play:d8, amp: 0.5, sustain: 0.6
+            sleep 0.25
+            play:e5, amp: 0.5, sustain: 0.6
+            play:e7, amp: 0.5, sustain: 0.6
+            play:e8, amp: 0.5, sustain: 0.6
+            sleep 0.25
+            play:b4, amp: 0.5, sustain: 0.75
+            play:b6, amp: 0.5, sustain: 0.75
+            play:b7, amp: 0.5, sustain: 0.75
+            sleep 4.75
+            play:g6, amp: 0.75, sustain: 0.6
+            play:g8, amp: 0.75, sustain: 0.6
+            play:g9, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:e6, amp: 0.75, sustain: 0.7
+            play:e8, amp: 0.75, sustain: 0.7
+            play:e9, amp: 0.75, sustain: 0.7
+            sleep 0.5
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.75
+            play:c6, amp: 0.75, sustain: 0.6
+            play:c8, amp: 0.75, sustain: 0.6
+            play:c9, amp: 0.75, sustain: 0.6
+            sleep 0.15
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.15
+            play:a5, amp: 0.75, sustain: 0.6
+            play:a7, amp: 0.75, sustain: 0.6
+            play:a8, amp: 0.75, sustain: 0.6
+            sleep 2
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:c6, amp: 0.75, sustain: 0.6
+            play:c8, amp: 0.75, sustain: 0.6
+            play:c9, amp: 0.75, sustain: 0.6
+            sleep 0.5
+            play:d6, amp: 0.75, sustain: 0.6
+            play:d8, amp: 0.75, sustain: 0.6
+            play:d9, amp: 0.75, sustain: 0.6
+            sleep 0.75
+            play:b5, amp: 0.75, sustain: 0.6
+            play:b7, amp: 0.75, sustain: 0.6
+            play:b8, amp: 0.75, sustain: 0.6
+            sleep 0.25
+            play:fs5, amp: 0.5, sustain: 0.6
+            play:fs7, amp: 0.5, sustain: 0.6
+            play:fs8, amp: 0.5, sustain: 0.6
+            sleep 1
+            play:fs5, amp: 0.5, sustain: 0.6
+            play:fs7, amp: 0.5, sustain: 0.6
+            play:fs8, amp: 0.5, sustain: 0.6
+            sleep 0.75
+            play:g5, amp: 0.5, sustain: 0.6
+            play:g7, amp: 0.5, sustain: 0.6
+            play:g8, amp: 0.5, sustain: 0.6
+            sleep 0.15
+            play:fs5, amp: 0.5, sustain: 0.6
+            play:fs7, amp: 0.5, sustain: 0.6
+            play:fs8, amp: 0.5, sustain: 0.6
+            sleep 0.15
+            play:e5, amp: 0.5, sustain: 0.6
+            play:e7, amp: 0.5, sustain: 0.6
+            play:e8, amp: 0.5, sustain: 0.6
+            sleep 2.65
+            play:d5, amp: 0.5, sustain: 0.6
+            play:d7, amp: 0.5, sustain: 0.6
+            play:d8, amp: 0.5, sustain: 0.6
+            sleep 0.25
+            play:e5, amp: 0.5, sustain: 1.8
+            play:e7, amp: 0.5, sustain: 1.8
+            play:e8, amp: 0.5, sustain: 1.8
+            sleep 4
+          end
+        end
+      end
+    end
+  end
+  stop
+end
+
+define :fun do |a, b, c|
+  with_fx :reverb,mix: 0.6 do
+    with_fx :record, buffer: :foo do
+      use_synth :dark_ambience
+      play:a4, sustain: 5, amp: 1
+      play:a5, sustain: 5, amp: 1.3
+      play:a6, sustain: 5, amp: 1
+      sleep 2
+      play:b4, sustain: 5, amp: 1
+      play:b5, sustain: 5, amp: 1.3
+      play:b6, sustain: 5, amp: 1
+      sleep 2
+      play a, sustain: 6, amp: 1
+      play b, sustain: 6, amp: 1.3
+      play c, sustain: 6, amp: 1
+      sleep 4
+    end
+  end
+end
+
+live_loop :loop do
+  2.times do
+    fun :c5, :c6, :c7
+    
+    fun :e5, :e6, :e7
+  end
+  stop
+end
+
+define :tran do |a|
+  with_fx :reverb do
+    with_fx :echo, mix: 0.1, phase: 0.55 do
+      sample :drum_cymbal_closed
+      sleep a
+    end
+  end
+end
+sleep 32
+live_loop :loopp do
+  1.times do
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.45
+    
+    tran 0.4
+    
+    tran 0.35
+    
+    tran 0.3
+    
+    tran 0.25
+    
+    tran 0.2
+    
+    tran 0.15
+    
+    tran 0.15
+    
+    tran 0.15
+    
+    tran 0.15
+    
+    tran 0.15
+  end
+  stop
+end
+sleep 6.7
+use_bpm 75
+live_loop :hii do
+  20.times do
+    sample :drum_cymbal_closed,amp: 2
+    sleep 0.125
+    sample :drum_cymbal_closed,amp: 2
+    sleep 0.125
+    sample :drum_cymbal_closed,amp: 2
+    sleep 0.25
+    14.times do
+      sample :drum_cymbal_closed,amp: 2
+      sleep 0.25
+    end
+  end
+  stop
+end
+live_loop :b do
+  20.times do
+    sample :bd_ada
+    play:cb1, amp: 6
+    sleep 0.5
+    sample :bd_ada
+    play:cb1, amp: 6
+    sleep 1
+    sample :bd_ada
+    play:db1, amp: 6
+    sleep 1
+    sample :bd_ada
+    play:cb1, amp: 6
+    sleep 1.5
+  end
+  stop
+end
+live_loop :c do
+  22.times do
+    sleep 1
+    c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
+    sample c, amp: 1.5
+    sleep 1.25
+    s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
+    sample s, amp: 1.5
+    sleep 0.75
+    c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
+    sample c, amp: 1.5
+    sleep 0.25
+    s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
+    sample s, amp: 1.5
+    sleep 0.75
+  end
+  stop
+end
+use_bpm 70
+live_loop :l do
+  80.times do
+    l = "C:/Users/Nicolas Higareda/Downloads/leead.wav"
+    sample l
+    sleep 0.9329
+  end
+  stop
+end
+live_loop :carti do
+  1.times do
+    j = "C:/Users/Nicolas Higareda/Downloads/bestone.wav"
+    sample j, amp: 1.2
+    sleep 300
+  end
+  stop
+end
