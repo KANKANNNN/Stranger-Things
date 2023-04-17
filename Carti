@@ -1,49 +1,97 @@
 use_bpm 75
-live_loop :hi do
+define :tran do |a|
+  with_fx :reverb do
+    with_fx :echo, mix: 0.1, phase: 0.55 do
+      sample :drum_cymbal_closed
+      sleep a
+    end
+  end
+end
+live_loop :loopp do
+  1.times do
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.5
+    
+    tran 0.45
+    
+    tran 0.4
+    
+    tran 0.35
+    
+    tran 0.3
+    
+    tran 0.25
+    
+    tran 0.2
+    
+    tran 0.15
+    
+    tran 0.15
+    
+    tran 0.15
+    
+    tran 0.15
+    
+    tran 0.15
+  end
+  stop
+end
+sleep 6.7
+live_loop :hii do
   20.times do
-    sample :drum_cymbal_closed, cutoff: 110,amp: 2
+    sample :drum_cymbal_closed,amp: 3
     sleep 0.125
-    sample :drum_cymbal_closed, cutoff: 110,amp: 2
+    sample :drum_cymbal_closed,amp: 3
     sleep 0.125
-    sample :drum_cymbal_closed, cutoff: 110,amp: 2
+    sample :drum_cymbal_closed,amp: 3
     sleep 0.25
     14.times do
-      sample :drum_cymbal_closed, cutoff: 110,amp: 2
+      sample :drum_cymbal_closed,amp: 3
       sleep 0.25
     end
   end
   stop
 end
+i = 0
+beats = [0.5, 1, 1, 1.5]
 live_loop :b do
   20.times do
-    sample :bd_ada
-    play:cb1, amp: 5.5
-    sleep 0.5
-    sample :bd_ada
-    play:cb1, amp: 5.5
-    sleep 1
-    sample :bd_ada
-    play:db1, amp: 5.5
-    sleep 1
-    sample :bd_ada
-    play:cb1, amp: 5.5
-    sleep 1.5
+    4.times do
+      sample :bd_ada
+      play:cb1, amp: 6.5
+      sleep beats[i]
+      i = i + 1
+    end
+    i = 0
   end
   stop
 end
 live_loop :c do
-  22.times do
+  20.times do
     sleep 1
-    c = "C:/Users/nicol/Downloads/clap.wav"
+    c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
     sample c, amp: 1.5
     sleep 1.25
-    s = "C:/Users/nicol/Downloads/sn.wav"
+    s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
     sample s, amp: 1.5
     sleep 0.75
-    c = "C:/Users/nicol/Downloads/clap.wav"
+    c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
     sample c, amp: 1.5
     sleep 0.25
-    s = "C:/Users/nicol/Downloads/sn.wav"
+    s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
     sample s, amp: 1.5
     sleep 0.75
   end
@@ -52,17 +100,43 @@ end
 use_bpm 70
 live_loop :l do
   80.times do
-    l = "C:/Users/nicol/Downloads/leead.wav"
-    sample l
+    l = "C:/Users/Nicolas Higareda/Downloads/leead.wav"
+    sample l, amp: 1.4
     sleep 0.9329
   end
   stop
 end
 live_loop :carti do
   1.times do
-    j = "C:/Users/nicol/Downloads/bestone.wav"
-    sample j
+    j = "C:/Users/Nicolas Higareda/Downloads/bestone.wav"
+    sample j, amp: 1.8
     sleep 300
   end
   stop
 end
+sleep 75.5
+c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
+sample c, amp: 1.5
+sleep 1.25
+s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
+sample s, amp: 1.5
+sleep 0.75
+c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
+sample c, amp: 1.5
+sleep 0.25
+s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
+sample s, amp: 1.5
+sleep 0.75
+sleep 1
+c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
+sample c, amp: 1
+sleep 1.25
+s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
+sample s, amp: 0.75
+sleep 0.75
+c = "C:/Users/Nicolas Higareda/Downloads/clap.wav"
+sample c, amp: 0.55
+sleep 0.25
+s = "C:/Users/Nicolas Higareda/Downloads/sn.wav"
+sample s, amp: 0.25
+sleep 0.75
